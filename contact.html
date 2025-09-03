@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Radians Stitches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="contact">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+256753054107">+256 123 456 789</a></p>
+      <p><strong>Email:</strong> <a href="graceigiradukunda@gmail.com">graceigiradukunda@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/256753054107" target="_blank">Chat Now</a></p>
+      <div style=" margin-top: 40px;">
+  <p style="font-size: 30px;">📍 Radians Stitches visible:</p>
+  <style>
+  .map-logo-container {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .map-logo-container:hover {
+    background-color: #0b6fe2; /* Light blue on hover */
+  }
+
+  .map-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4285F4;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+</style>
+  <a href="https://www.google.com/maps/place/12d+Wamala+Rd,+Kampala/@0.2839831,32.5595214,19.73z/data=!4m6!3m5!1s0x177dbce00002f80d:0x8465e07aa5c3f875!8m2!3d0.2841858!4d32.5599104!16s%2Fg%2F11jx3rnmq0?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none;">
+    <img src="glogo.png" alt="Google Maps Logo" width="100px" style="vertical-align: middle; margin-right: 10px;"background-color=" #0b6fe2">
+    <span style="font-size: 30px; color: #4285F4;">Find us on Google</span>
+  </a>
+</div>
+
+<!-- Booking Section -->
+<section class="booking">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book or Send via WhatsApp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 20px;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #128C7E;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Book an Appointment</h2>
+  <form id="bookingForm" class="contact-form">
+    <input type="text" name="fullName" placeholder="Full Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <textarea name="request" placeholder="What would you like tailored?" required></textarea>
+    <button type="submit">Book Now</button>
+  </form>
+
+  <h2>Send a Message</h2>
+  <form id="messageForm" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="text" name="contact" placeholder="Your Contact (optional)" />
+    <textarea name="message" placeholder="Your Message or Booking Request" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <script>
+    const whatsappNumber = "256753054107"; // Your WhatsApp number
+
+    // Booking Form Handler
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const fullName = this.fullName.value;
+      const email = this.email.value;
+      const phone = this.phone.value;
+      const request = this.request.value;
+
+      const message = `Hello, my name is ${fullName}. My email is ${email}, phone number is ${phone}. I would like tailored: ${request}`;
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+    });
+
+    // Message Form Handler
+    document.getElementById("messageForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = this.name.value;
+      const contact = this.contact.value;
+      const message = this.message.value;
+
+      const fullMessage = `Hi, I'm ${name}. You can reach me at ${contact}. Here's my message: ${message}`;
+      const encoded = encodeURIComponent(fullMessage);
+      window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
+
+  </form>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Radians Stitches. All rights reserved.</p>
+  </footer>
+</body>
+</html>
