@@ -220,7 +220,7 @@ footer {
       font-size: 20px;
 }
 h3{
-  font-size: 50;
+  font-size: 50px;
   color: #0810f4;
   }
 #gallery {
@@ -303,7 +303,155 @@ h3{
     padding: 10px;
   }
 }
+/* ===========================
+   Mobile Responsive Design
+   =========================== */
+@media screen and (max-width: 768px) {
 
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Logo */
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Header */
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    width: auto;
+    height: auto;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  /* Navigation */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  /* Main */
+  main {
+    padding: 15px;
+  }
+
+  /* About section */
+  #about-business {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .section p,
+  .section ul li {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 20px;
+  }
+
+  /* Services */
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .service-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-card h3 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .book-btn {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img,
+  .gallery-grid video {
+    height: auto;
+  }
+
+  /* Forms */
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Social links */
+  .social-links {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    font-size: 35px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Videos */
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
