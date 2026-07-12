@@ -122,35 +122,47 @@
     <button type="submit">Send Message</button>
   </form>
 
-  <script>
-    const whatsappNumber = "256753054107"; // Your WhatsApp number
+<script>
+const phoneNumber = "256753054107"; // Your WhatsApp number
 
-    // Booking Form Handler
-    document.getElementById("bookingForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const fullName = this.fullName.value;
-      const email = this.email.value;
-      const phone = this.phone.value;
-      const request = this.request.value;
+// Booking Form
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      const message = `Hello, my name is ${fullName}. My email is ${email}, phone number is ${phone}. I would like tailored: ${request}`;
-      const encoded = encodeURIComponent(message);
-      window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
-    });
+    const fullName = this.fullName.value;
+    const phone = this.phone.value;
+    const request = this.request.value;
 
-    // Message Form Handler
-    document.getElementById("messageForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = this.name.value;
-      const contact = this.contact.value;
-      const message = this.message.value;
+    const message =
+`*NEW APPOINTMENT BOOKING*
+Name: ${fullName}
+Phone: ${phone}
 
-      const fullMessage = `Hi, I'm ${name}. You can reach me at ${contact}. Here's my message: ${message}`;
-      const encoded = encodeURIComponent(fullMessage);
-      window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
-    });
-  </script>
+Request:
+${request}`;
 
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+});
+
+// Message Form
+document.getElementById("messageForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const contact = this.contact.value;
+    const messageText = this.message.value;
+
+    const message =
+`*NEW WEBSITE MESSAGE*
+Name: ${name}
+Contact: ${contact}
+
+Message:
+${messageText}`;
+
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+});
+</script>
 </body>
 </html>
 
